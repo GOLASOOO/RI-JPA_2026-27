@@ -1,0 +1,27 @@
+INDEX VERSION 1.134+/Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/.metadata/.plugins/org.eclipse.jdt.core
+573649550.index
+192612711.index
+316204004.index
+962624281.index
+1856880009.index
+3863265688.index
+254785320.index
+2193369111.index
+3839725852.index
+1202290219.index
+71129835.index
+4270616185.index
+3667914168.index
+226613048.index
+597655710.index
+27531312.index
+3057395137.index
+2055778526.index
+3591658710.index
+2671941946.index
+2730123862.index
+204235513.index
+4223156180.index
+1736256542.index
+2972132535.index
+3696322002.index
