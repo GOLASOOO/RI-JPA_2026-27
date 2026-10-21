@@ -20,7 +20,16 @@ public class Charge {
 		// store the amount rounded to cents
 		// increments the paymentMean accumulated -> paymentMean.charge( amount )
 		// links invoice, this and paymentMean
-    	throw new UnsupportedOperationException("Not yet implemented");
+    	ArgumentChecks.isNotNull(invoice, "Invoice cannot be null");
+    	ArgumentChecks.isNotNull(paymentMean, "Payment mean cannot be null");
+    	ArgumentChecks.isNotNull(amount, "Amount cannot be null");
+    	ArgumentChecks.isTrue(amount.isNonNegative(), "Amount must be equal or greater than zero");
+    	
+    	paymentMean.charge(amount);
+    	this.amount = amount.roundToCents();
+    	Associations.SettlesWithdraws.atomicLink(invoice, this, paymentMean);
+//    	throw new UnsupportedOperationException("Not yet implemented");
+    	
     }
 
     // ---- Getters ----

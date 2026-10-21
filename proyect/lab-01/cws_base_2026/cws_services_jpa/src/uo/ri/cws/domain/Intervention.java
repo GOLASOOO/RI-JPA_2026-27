@@ -56,7 +56,63 @@ public class Intervention {
 		// Truncate the date to milliseconds to avoid precision issues
 		// links the intervention with the work order and mechanic (atomiclink)
 		// For each substitution in the map, add it to the intervention
-		throw new UnsupportedOperationException("Not implemented yet");
+		
+		ArgumentChecks.isNotNull(mechanic, "Mechanic cannot be null");
+		ArgumentChecks.isNotNull(workOrder, "WorkOrder cannot be null");
+		ArgumentChecks.isNotNull(date, "Date cannot be null");
+		ArgumentChecks.isTrue(minutes >= 0, "Minutes must be greater or equal than zero");
+		ArgumentChecks.isNotNull(substitutions, "Substitutions map cannot be null");
+		
+		this.date = date.truncatedTo(ChronoUnit.MILLIS);
+		Associations.RecordsIntervenes.atomicLink(workOrder, this, mechanic);
+		
+		for (Map.Entry<SparePart, Integer> entry : substitutions.entrySet()) {
+			SparePart sparePart = entry.getKey();
+			Integer quantity = entry.getValue();
+			addSubstitution(sparePart, quantity);
+		}
+		
+//		throw new UnsupportedOperationException("Not implemented yet");
+	}
+	
+	@Override
+	public String toString() {
+		return "Intervention [date=" + date + ", minutes=" + minutes + ", workOrder=" + workOrder + ", mechanic="
+				+ mechanic + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(date, mechanic, workOrder);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Intervention other = (Intervention) obj;
+		return Objects.equals(date, other.date) && Objects.equals(mechanic, other.mechanic)
+				&& Objects.equals(workOrder, other.workOrder);
+	}
+
+	public LocalDateTime getDate() {
+		return date;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public WorkOrder getWorkOrder() {
+		return workOrder;
+	}
+
+	public Mechanic getMechanic() {
+		return mechanic;
 	}
 
 	// ---------------------------- Association helpers -----------------------------

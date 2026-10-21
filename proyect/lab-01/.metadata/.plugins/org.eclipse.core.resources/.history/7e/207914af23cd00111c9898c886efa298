@@ -1,0 +1,18 @@
+package uo.ri.cws.domain;
+
+import uo.ri.cws.domain.types.Money;
+import uo.ri.util.assertion.ArgumentChecks;
+
+public class VehicleType {
+    private String name;
+    private Money pricePerHour;
+
+    public VehicleType(String name, Money pricePerHour) {
+    	ArgumentChecks.isNotBlank(name);
+    	ArgumentChecks.isNotNull(pricePerHour);
+    	
+    	this.name = name;
+		this.pricePerHour = pricePerHour;
+	}
+    
+}

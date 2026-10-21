@@ -1,7 +1,5 @@
 package uo.ri.cws.domain;
 
-import java.util.Objects;
-
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
@@ -18,6 +16,8 @@ public abstract class PaymentMean {
     // ---- Association helpers ----
 
     void _setClient(Client client) {
+    	ArgumentChecks.isNotNull(client, "Client cannot be null");
+    	
         this.client = client;
     }
 
@@ -31,10 +31,12 @@ public abstract class PaymentMean {
      * @param amount
      */
     /* package */ void charge(Money amount) {
-    	// Normalize the amount to cents 
+    	// Normalize the amount to cents
     	// check if it can be charged
     	// increment the accumulated amount
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	Money normalizedAmount = normalizePositive(amount);
+    	StateChecks.isTrue(canBeCharged(normalizedAmount), "Payment mean cannot be charged with the given amount");
+    	accumulated = Money.calc(accumulated).add(normalizedAmount).toMoneyRoundedToCents();
     }
 
     /**

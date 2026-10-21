@@ -5,6 +5,7 @@ import java.util.Objects;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.VoucherCode;
 import uo.ri.util.assertion.ArgumentChecks;
+import uo.ri.util.assertion.StateChecks;
 
 public class Voucher extends PaymentMean {
 
@@ -46,13 +47,39 @@ public class Voucher extends PaymentMean {
     public VoucherCode getCode() {
         return code;
     }
+    
+    
 
     // ---- Business methods ----
 
     @Override
+	public String toString() {
+		return "Voucher [code=" + code + ", description=" + description + ", availableAmount=" + availableAmount + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(code);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Voucher other = (Voucher) obj;
+		return Objects.equals(code, other.code);
+	}
+
+	@Override
     /* package */ void charge(Money amount) {
     	// Charges the amount to the payment mean and subtracts it from the available amount
-    	throw new UnsupportedOperationException("Not implemented yet");
+		super.charge(amount);
+		availableAmount = Money.calc(availableAmount).subtract(amount).toMoneyRoundedToCents();
+//    	throw new UnsupportedOperationException("Not implemented yet");
     }
 
 	@Override
@@ -63,7 +90,11 @@ public class Voucher extends PaymentMean {
 
     @Override
     public boolean canBeCharged(Money amount) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	StateChecks.isNotNull(amount, "Amount cannot be null");
+    	StateChecks.isTrue(amount.greaterThan(Money.ZERO), "Amount must be greater than zero");
+    	StateChecks.isTrue(availableAmount.greaterOrEqual(amount), "Amount must be less than or equal to available amount");
+    	return true;
+//    	throw new UnsupportedOperationException("Not implemented yet");
     }
 
 }

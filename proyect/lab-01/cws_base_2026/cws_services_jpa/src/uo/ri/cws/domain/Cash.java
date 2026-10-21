@@ -1,13 +1,18 @@
 package uo.ri.cws.domain;
 
 import uo.ri.cws.domain.types.Money;
+import uo.ri.util.assertion.ArgumentChecks;
 
 public class Cash extends PaymentMean {
 
 	// ---- Constructors ----
 	
 	public Cash(Client client) {
-		throw new UnsupportedOperationException("Not implemented yet");
+		ArgumentChecks.isNotNull(client, "Client cannot be null");
+		
+		Associations.Holds.link(client, this);
+		
+//		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
 	// ---- Business methods ----
@@ -23,4 +28,27 @@ public class Cash extends PaymentMean {
 		return "Cash [accumulated=" + getAccumulated() + ", client=" + getClient() + "]";
 	}
 
+	/**
+	 * As we have no additional attributes, we cannto implement the #
+	 * we can use "extend" equals and hashCode methods from Object class.
+	 * or manually add it
+	 * */
+	
+	public int hashCode() {
+		return getClient().hashCode();
+	}
+	
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cash other = (Cash) obj;
+		return getClient().equals(other.getClient());
+	}
+	
+	
+	
 }

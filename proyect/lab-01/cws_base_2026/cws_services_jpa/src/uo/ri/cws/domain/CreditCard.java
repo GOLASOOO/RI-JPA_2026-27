@@ -7,6 +7,7 @@ import java.util.Objects;
 import uo.ri.cws.domain.types.CreditCardNumber;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
+import uo.ri.util.assertion.StateChecks;
 
 public class CreditCard extends PaymentMean {
 
@@ -25,7 +26,39 @@ public class CreditCard extends PaymentMean {
         this.validThru = validThru.atEndOfMonth(); // internal conversion for mapping simplicity
     }
 
-    // ---- Business methods ----
+    
+    
+    @Override
+	public int hashCode() {
+		return Objects.hash(number);
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "CreditCard [number=" + number + ", type=" + type + ", validThru=" + validThru + "]";
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CreditCard other = (CreditCard) obj;
+		return Objects.equals(number, other.number);
+	}
+
+	public YearMonth getValidThru() {
+		return YearMonth.from(validThru);
+	}
+
+	// ---- Business methods ----
     public boolean isValidNow() {
     	return ! validThru.isBefore( LocalDate.now() ); // validThru >= today, today included
     }
@@ -35,6 +68,11 @@ public class CreditCard extends PaymentMean {
 	 */
     @Override
     public boolean canBeCharged(Money amount) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+//    	throw new UnsupportedOperationException("Not implemented yet");
+    	ArgumentChecks.isNotNull(amount, "Amount cannot be null");
+    	StateChecks.isTrue(amount.isNonNegative(), "Amount must be non-negative");
+    	StateChecks.isTrue(isValidNow(), "Credit card is outdated");
+    	
+    	return true;
     }
 }

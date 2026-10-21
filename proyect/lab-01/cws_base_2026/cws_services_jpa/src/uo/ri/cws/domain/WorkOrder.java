@@ -52,7 +52,18 @@ public class WorkOrder {
     	// Truncate the date to milliseconds to avoid precision issues
     	// Link the work order with the vehicle
     	
-    	throw new UnsupportedOperationException("Not implemented yet");
+    	ArgumentChecks.isNotNull(vehicle);
+    	ArgumentChecks.isNotNull(date);
+    	ArgumentChecks.isNotBlank(description);
+    	
+//    	this.vehicle = vehicle; // NOT this one as this is done via Associations.Fixes.link(vehicle, this);
+    	this.date = date.truncatedTo(ChronoUnit.MILLIS);
+    	this.description = description;
+    	Associations.Fixes.link(vehicle, this);
+    	
+    	
+    	
+//    	throw new UnsupportedOperationException("Not implemented yet");
     }
 
     // ---- Getters ----
@@ -87,8 +98,33 @@ public class WorkOrder {
     public Set<Intervention> getInterventions() {
         return new HashSet<>(interventions);
     }
+    
+    
 
-    // ---- Association helpers ----
+    @Override
+	public int hashCode() {
+		return Objects.hash(date, vehicle);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		WorkOrder other = (WorkOrder) obj;
+		return Objects.equals(date, other.date) && Objects.equals(vehicle, other.vehicle);
+	}
+
+	@Override
+	public String toString() {
+		return "WorkOrder [date=" + date + ", description=" + description + ", amount=" + amount + ", state=" + state
+				+ ", vehicle=" + vehicle + "]";
+	}
+
+	// ---- Association helpers ----
     void _setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }

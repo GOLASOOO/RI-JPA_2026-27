@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="WorkOrderConstructorTests" project="cws_services_jpa" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="WorkOrderConstructorTests" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]">
+    <testcase name="testWorkOrderForVehicleAndDateAndDescription" classname="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="testWorkOrderForVehicleAndDateAndDescription()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]/[method:testWorkOrderForVehicleAndDateAndDescription()]"/>
+    <testcase name="testWorkOrderForNullVehicle" classname="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="testWorkOrderForNullVehicle()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]/[method:testWorkOrderForNullVehicle()]"/>
+    <testcase name="testWorkOrderForVehicle" classname="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="testWorkOrderForVehicle()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]/[method:testWorkOrderForVehicle()]"/>
+    <testcase name="testWorkOrderForVehicleAndDate" classname="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="testWorkOrderForVehicleAndDate()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]/[method:testWorkOrderForVehicleAndDate()]"/>
+    <testcase name="testWorkOrderForVehicleAndDescription" classname="uo.ri.cws.domain.WorkOrderConstructorTests" time="0.0" displayname="testWorkOrderForVehicleAndDescription()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderConstructorTests]/[method:testWorkOrderForVehicleAndDescription()]"/>
+  </testsuite>
+</testrun>

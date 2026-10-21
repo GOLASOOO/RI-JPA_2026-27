@@ -53,12 +53,14 @@ public class Invoice {
 	
 	public Invoice(long number) {
 		// call full constructor with sensible defaults
-		throw new UnsupportedOperationException("Not implemented yet");
+//		throw new UnsupportedOperationException("Not implemented yet");
+		this(number, LocalDate.now(), List.of());
 	}
 
 	public Invoice(long number, LocalDate date) {
 		// call full constructor with sensible defaults
-		throw new UnsupportedOperationException("Not implemented yet");
+//		throw new UnsupportedOperationException("Not implemented yet");
+		this(number, date, List.of());
 	}
 
 	public Invoice(long number, List<WorkOrder> workOrders) {
@@ -69,7 +71,18 @@ public class Invoice {
 		// check arguments (always), through IllegalArgumentException
 		// store the number
 		// add every work order calling addWorkOrder( w )
-		throw new UnsupportedOperationException("Not implemented yet");
+		ArgumentChecks.isTrue(workOrders.isEmpty(), "Invoice must have at least one work order");
+		ArgumentChecks.isNotNull(date, "Invoice date cannot be null");
+//		ArgumentChecks.isTrue(workOrders.stream().allMatch(wo -> wo.getState() == WorkOrder.WorkOrderState.APPROVED), "All work orders must be approved");
+		ArgumentChecks.isNotNull(workOrders, "Work orders list cannot be null");
+		
+		this.number = number;
+		this.date = date;
+		for (WorkOrder workOrder : workOrders) {
+			addWorkOrder(workOrder);
+		}
+		
+//		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
 	// ---- Getters ----

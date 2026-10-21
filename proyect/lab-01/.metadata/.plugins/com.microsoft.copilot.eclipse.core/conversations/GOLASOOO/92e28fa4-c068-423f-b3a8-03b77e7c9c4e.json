@@ -1,0 +1,56 @@
+{
+  "conversationId": "92e28fa4-c068-423f-b3a8-03b77e7c9c4e",
+  "title": "can a java interface have a field?",
+  "requesterUsername": "GOLASOOO",
+  "responderUsername": "GitHub Copilot",
+  "turns": [
+    {
+      "message": {
+        "text": "can a java interface have a field?"
+      },
+      "currentDocument": {
+        "uri": "/cws_services_jpa/src/uo/ri/cws/domain/Voucher.java"
+      },
+      "references": [],
+      "ignoredSkills": [],
+      "userLanguage": "en",
+      "source": "panel",
+      "model": "Auto",
+      "chatMode": "Agent",
+      "customChatModeId": "Agent",
+      "needToolCallConfirmation": true,
+      "turnId": "289f73af-01d3-4a02-8ac1-17dce3906e41",
+      "role": "user",
+      "timestamp": "2026-10-21T21:12:12.085107Z"
+    },
+    {
+      "reply": {
+        "annotations": [],
+        "references": [],
+        "hideText": false,
+        "notifications": [],
+        "followups": [],
+        "errorMessages": [
+          {
+            "error": {
+              "message": "No model configuration found",
+              "code": -1
+            }
+          }
+        ],
+        "editAgentRounds": [],
+        "panelMessages": [],
+        "steps": [],
+        "agentMessages": [],
+        "data": {},
+        "modelName": "auto",
+        "billingMultiplier": 0.0
+      },
+      "turnId": "289f73af-01d3-4a02-8ac1-17dce3906e41",
+      "role": "copilot",
+      "timestamp": "2026-10-21T21:12:12.450573Z"
+    }
+  ],
+  "creationDate": "2026-10-21T21:12:12.074852Z",
+  "lastMessageDate": "2026-10-21T21:12:13.261328Z"
+}
