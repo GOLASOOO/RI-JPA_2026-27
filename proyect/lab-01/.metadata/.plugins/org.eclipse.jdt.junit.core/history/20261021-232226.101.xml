@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun SparePartConstructorTests" project="cws_services_jpa" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="uo.ri.cws.domain.SparePartConstructorTests" time="0.007" displayname="SparePartConstructorTests" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SparePartConstructorTests]">
-    <testcase name="testPriceCannotBeNgative" classname="uo.ri.cws.domain.SparePartConstructorTests" time="0.005" displayname="testPriceCannotBeNgative()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SparePartConstructorTests]/[method:testPriceCannotBeNgative()]"/>
-    <testcase name="testPriceIsRoundedToCentsUsingHalfEven" classname="uo.ri.cws.domain.SparePartConstructorTests" time="0.001" displayname="testPriceIsRoundedToCentsUsingHalfEven()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SparePartConstructorTests]/[method:testPriceIsRoundedToCentsUsingHalfEven()]"/>
-    <testcase name="testDescriptionCannotBeNull" classname="uo.ri.cws.domain.SparePartConstructorTests" time="0.001" displayname="testDescriptionCannotBeNull()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SparePartConstructorTests]/[method:testDescriptionCannotBeNull()]"/>
-    <testcase name="testCodeNull" classname="uo.ri.cws.domain.SparePartConstructorTests" time="0.0" displayname="testCodeNull()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SparePartConstructorTests]/[method:testCodeNull()]"/>
-  </testsuite>
-</testrun>

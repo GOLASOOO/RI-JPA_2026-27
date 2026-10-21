@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun SubstitutionConstructorTests (Failed Tests first)" project="cws_services_jpa" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="uo.ri.cws.domain.SubstitutionConstructorTests" time="0.226" displayname="SubstitutionConstructorTests" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SubstitutionConstructorTests]">
-    <testcase name="testNullArgumentsAreRejected" classname="uo.ri.cws.domain.SubstitutionConstructorTests" time="0.221" displayname="testNullArgumentsAreRejected()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SubstitutionConstructorTests]/[method:testNullArgumentsAreRejected()]"/>
-    <testcase name="testNonPositiveQuantityIsRejected" classname="uo.ri.cws.domain.SubstitutionConstructorTests" time="0.002" displayname="testNonPositiveQuantityIsRejected()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SubstitutionConstructorTests]/[method:testNonPositiveQuantityIsRejected()]"/>
-    <testcase name="testSubstitution" classname="uo.ri.cws.domain.SubstitutionConstructorTests" time="0.003" displayname="testSubstitution()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.SubstitutionConstructorTests]/[method:testSubstitution()]"/>
-  </testsuite>
-</testrun>

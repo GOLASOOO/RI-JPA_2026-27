@@ -45,7 +45,12 @@ public abstract class PaymentMean {
 	 * @param amount
 	 */
 	/* package */ void rewind(Money amount) {
-    	throw new UnsupportedOperationException("Not implemented yet");
+//    	throw new UnsupportedOperationException("Not implemented yet");
+		Money normalizedAmount = normalizePositive(amount);
+		StateChecks.isTrue(accumulated.greaterOrEqual(normalizedAmount), "Payment mean cannot be rewound with the given amount");
+		accumulated = Money.calc(accumulated).subtract(normalizedAmount).toMoneyRoundedToCents();
+		
+		
 	}
 
 	public Client getClient() {

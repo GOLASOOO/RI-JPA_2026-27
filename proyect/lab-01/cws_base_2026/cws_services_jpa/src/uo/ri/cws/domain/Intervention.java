@@ -9,6 +9,7 @@ import java.util.Set;
 
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
+import uo.ri.util.assertion.StateChecks;
 
 /**
  * Represents an intervention performed by a mechanic on a work order.
@@ -62,14 +63,14 @@ public class Intervention {
 		ArgumentChecks.isNotNull(date, "Date cannot be null");
 		ArgumentChecks.isTrue(minutes >= 0, "Minutes must be greater or equal than zero");
 		ArgumentChecks.isNotNull(substitutions, "Substitutions map cannot be null");
-		
+		validateSubstitutions(substitutions);
+
 		this.date = date.truncatedTo(ChronoUnit.MILLIS);
+		this.minutes = minutes;
 		Associations.RecordsIntervenes.atomicLink(workOrder, this, mechanic);
-		
+
 		for (Map.Entry<SparePart, Integer> entry : substitutions.entrySet()) {
-			SparePart sparePart = entry.getKey();
-			Integer quantity = entry.getValue();
-			addSubstitution(sparePart, quantity);
+			addSubstitution(entry.getKey(), entry.getValue());
 		}
 		
 //		throw new UnsupportedOperationException("Not implemented yet");
@@ -135,7 +136,11 @@ public class Intervention {
 	// ---------------------------- Business methods -----------------------------
 
 	/* package */ void removeSubstitutions() {
-		throw new UnsupportedOperationException("Not implemented yet");
+//		throw new UnsupportedOperationException("Not implemented yet");
+		for (Substitution s : new HashSet<>(substitutions)) {
+			Associations.PerformsSubstitutes.atomicUnlink(s);
+			
+		}
 	}
 
 	/**
@@ -159,7 +164,13 @@ public class Intervention {
 	}
 
 	private Money calculateSparesAmount() {
-		throw new UnsupportedOperationException("Not implemented yet");
+		Money total = Money.ZERO;
+		for (Substitution s : substitutions) {
+			total = Money.calc(total).add(s.getTotalAmount()).toMoneyRoundedToCents();
+		}
+
+		return total;
+		
 	}
 
 	private void addSubstitution(SparePart sparePart, int quantity) {
@@ -167,7 +178,11 @@ public class Intervention {
 	}
 
 	private static void validateSubstitutions(Map<SparePart, Integer> substitutions) {
-		throw new UnsupportedOperationException("Not implemented yet");
+		for (Map.Entry<SparePart, Integer> entry : substitutions.entrySet()) {
+			ArgumentChecks.isNotNull(entry.getKey(), "SparePart cannot be null");
+			ArgumentChecks.isNotNull(entry.getValue(), "Quantity cannot be null");
+			ArgumentChecks.isTrue(entry.getValue() > 0, "Quantity must be greater than zero");
+		}
 	}
 
 }

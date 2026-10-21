@@ -71,13 +71,14 @@ public class Invoice {
 		// check arguments (always), through IllegalArgumentException
 		// store the number
 		// add every work order calling addWorkOrder( w )
-		ArgumentChecks.isTrue(workOrders.isEmpty(), "Invoice must have at least one work order");
 		ArgumentChecks.isNotNull(date, "Invoice date cannot be null");
-//		ArgumentChecks.isTrue(workOrders.stream().allMatch(wo -> wo.getState() == WorkOrder.WorkOrderState.APPROVED), "All work orders must be approved");
 		ArgumentChecks.isNotNull(workOrders, "Work orders list cannot be null");
-		
+		ArgumentChecks.isTrue(workOrders.stream().allMatch(Objects::nonNull), "Work orders cannot contain null elements");
+		StateChecks.isTrue(workOrders.stream().allMatch(WorkOrder::isApproved), "All work orders must be approved");
+
 		this.number = number;
 		this.date = date;
+		this.vatRate = getApplicableVatRate();
 		for (WorkOrder workOrder : workOrders) {
 			addWorkOrder(workOrder);
 		}
@@ -116,7 +117,12 @@ public class Invoice {
 		// compute the invoice amount after adding the work order
 		// marks it as invoiced
 		
-		throw new UnsupportedOperationException("Not implemented yet");
+		ArgumentChecks.isNotNull(workOrder, "Work order cannot be null");
+		StateChecks.isTrue(workOrder.isApproved(), "Work order must be approved");
+		StateChecks.isTrue(!isSettled(), "Cannot add work order to a settled invoice");
+		
+		Associations.Bills.link(this, workOrder);
+		workOrder.invoice();
 	}
 
 	/**
@@ -124,7 +130,12 @@ public class Invoice {
 	 * @param workOrder
 	 */
 	public void removeWorkOrder(WorkOrder workOrder) {
-		throw new UnsupportedOperationException("Not implemented yet");
+		ArgumentChecks.isNotNull(workOrder, "Work order cannot be null");
+		ArgumentChecks.isTrue(workOrders.contains(workOrder), "Work order does not belong to this invoice");
+		StateChecks.isTrue(!isSettled(), "Cannot remove work order from a settled invoice");
+
+		Associations.Bills.unlink(workOrder);
+		workOrder.uninvoice();
 	}
 
 	public boolean isSettled() {
@@ -143,7 +154,26 @@ public class Invoice {
 		// For each payment mean, create a Charge and link it to the invoice and payment mean
 		// Set the invoice state to PAID
 
-		throw new UnsupportedOperationException("Not implemented yet");
+		ArgumentChecks.isNotNull(requestedCharges, "Requested charges map cannot be null");
+		ArgumentChecks.isFalse(requestedCharges.isEmpty(), "Requested charges map cannot be empty");
+		StateChecks.isTrue(!isSettled(), "Invoice is already settled");
+		Map<PaymentMean, Money> normalizedCharges = normalize(requestedCharges);
+		
+		Money totalCharges = chargesTotal(normalizedCharges);
+		StateChecks.isTrue(totalCharges.equals(getTotal()), "Total of requested charges must equal invoice total");
+
+		for (Map.Entry<PaymentMean, Money> entry : normalizedCharges.entrySet()) {
+			StateChecks.isTrue(entry.getKey().canBeCharged(entry.getValue()), "Payment mean cannot be charged with the given amount");
+		}
+
+		for (Map.Entry<PaymentMean, Money> entry : normalizedCharges.entrySet()) {
+			PaymentMean paymentMean = entry.getKey();
+			Money amount = entry.getValue();
+			new Charge(this, paymentMean, amount);
+		}
+		
+		state = InvoiceState.PAID;
+		
 	}
 
 	public void unSettle() {
@@ -183,6 +213,30 @@ public class Invoice {
 		Money.MoneyCalculator calculator = Money.calc();
 		requestedCharges.values().forEach(calculator::add);
 		return calculator.toMoneyRoundedToCents();
+	}
+
+	public Money getSubtotal() {
+		subtotal = Money.ZERO;
+		for (WorkOrder workorder : workOrders) {
+			subtotal = Money.calc(subtotal).add(workorder.getAmount()).toMoneyRoundedToCents();
+		}
+		return subtotal;
+		
+	}
+
+	public Percentage getVatRate() {
+		return vatRate;
+		
+	}
+
+	public Money getVatAmount() {
+		return Money.calc(getSubtotal()).times(getVatRate().asRatio()).toMoneyRoundedToCents();
+		
+	}
+
+	public Money getTotal() {
+		return Money.calc(getSubtotal()).add(getVatAmount()).toMoneyRoundedToCents();
+		
 	}
 
 }

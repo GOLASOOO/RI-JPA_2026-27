@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun InterventionRemoveSubstitutionsTests" project="cws_services_jpa" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="uo.ri.cws.domain.InterventionRemoveSubstitutionsTests" time="0.243" displayname="InterventionRemoveSubstitutionsTests" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.InterventionRemoveSubstitutionsTests]">
+    <testcase name="testRemoveSeveralSubstitutions" classname="uo.ri.cws.domain.InterventionRemoveSubstitutionsTests" time="0.24" displayname="testRemoveSeveralSubstitutions()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.InterventionRemoveSubstitutionsTests]/[method:testRemoveSeveralSubstitutions()]"/>
+    <testcase name="testRemoveOneSubstitution" classname="uo.ri.cws.domain.InterventionRemoveSubstitutionsTests" time="0.002" displayname="testRemoveOneSubstitution()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.InterventionRemoveSubstitutionsTests]/[method:testRemoveOneSubstitution()]"/>
+    <testcase name="testEmptyIntervention" classname="uo.ri.cws.domain.InterventionRemoveSubstitutionsTests" time="0.0" displayname="testEmptyIntervention()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.InterventionRemoveSubstitutionsTests]/[method:testEmptyIntervention()]"/>
+  </testsuite>
+</testrun>

@@ -53,7 +53,11 @@ public class Charge {
      */
 	/* package */ void rewind() {
 		// decrements the payment mean accumulated ( paymentMean.rewind( amount) )
-    	throw new UnsupportedOperationException("Not yet implemented");
+    	StateChecks.isTrue(invoice != null, "Charge is not linked to an invoice");
+    	StateChecks.isTrue(paymentMean != null, "Charge is not linked to a payment mean");
+
+    	paymentMean.rewind(amount);
+    	Associations.SettlesWithdraws.atomicUnlink(this);
     }
 
     // ---- Association helpers ----

@@ -7,7 +7,6 @@ import java.util.Objects;
 import uo.ri.cws.domain.types.CreditCardNumber;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
-import uo.ri.util.assertion.StateChecks;
 
 public class CreditCard extends PaymentMean {
 
@@ -68,11 +67,21 @@ public class CreditCard extends PaymentMean {
 	 */
     @Override
     public boolean canBeCharged(Money amount) {
-//    	throw new UnsupportedOperationException("Not implemented yet");
     	ArgumentChecks.isNotNull(amount, "Amount cannot be null");
-    	StateChecks.isTrue(amount.isNonNegative(), "Amount must be non-negative");
-    	StateChecks.isTrue(isValidNow(), "Credit card is outdated");
-    	
-    	return true;
+    	ArgumentChecks.isTrue(amount.greaterThan(Money.ZERO), "Amount must be greater than zero");
+
+    	return isValidNow();
     }
+
+
+
+	public CreditCardNumber getNumber() {
+		return number;
+	}
+
+
+
+	public String getType() {
+		return type;
+	}
 }
