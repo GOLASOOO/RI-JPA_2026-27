@@ -7,7 +7,7 @@
         <listEntry value="2"/>
     </listAttribute>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables"/>
-    <stringAttribute key="org.eclipse.debug.core.terminate.timestamp" value="1792625663425"/>
+    <stringAttribute key="org.eclipse.debug.core.terminate.timestamp" value="1792668463965"/>
     <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value="=cws_services_jpa/test=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/"/>
     <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit5"/>

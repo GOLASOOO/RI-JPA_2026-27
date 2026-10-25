@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun WorkOrderAssignToTests" project="cws_services_jpa" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="uo.ri.cws.domain.WorkOrderAssignToTests" time="0.192" displayname="WorkOrderAssignToTests" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderAssignToTests]">
-    <testcase name="testAssignToMechanicWhenInvoiced" classname="uo.ri.cws.domain.WorkOrderAssignToTests" time="0.188" displayname="testAssignToMechanicWhenInvoiced()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderAssignToTests]/[method:testAssignToMechanicWhenInvoiced()]"/>
-    <testcase name="testAssignToNullMechanic" classname="uo.ri.cws.domain.WorkOrderAssignToTests" time="0.001" displayname="testAssignToNullMechanic()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderAssignToTests]/[method:testAssignToNullMechanic()]"/>
-    <testcase name="testAssignToMechanic" classname="uo.ri.cws.domain.WorkOrderAssignToTests" time="0.001" displayname="testAssignToMechanic()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderAssignToTests]/[method:testAssignToMechanic()]"/>
-    <testcase name="testAssignToMechanicWhenFinished" classname="uo.ri.cws.domain.WorkOrderAssignToTests" time="0.001" displayname="testAssignToMechanicWhenFinished()" uniqueid="[engine:junit-jupiter]/[class:uo.ri.cws.domain.WorkOrderAssignToTests]/[method:testAssignToMechanicWhenFinished()]"/>
-  </testsuite>
-</testrun>

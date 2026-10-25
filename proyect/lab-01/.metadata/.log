@@ -5244,3 +5244,562 @@ Binding(ESC,
 
 !ENTRY org.eclipse.lsp4e 1 0 2026-10-22 01:35:45.788
 !MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 01:42:22.620
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 01:58:07.523
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 01:58:07.861
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 02:13:52.379
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 02:28:43.935
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 02:38:36.407
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 02:39:06.414
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 02:54:21.876
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 03:10:22.379
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 03:10:22.963
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 03:15:22.316
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 03:34:47.706
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 03:40:55.258
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 03:56:41.801
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 03:56:41.912
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:01:41.853
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 04:02:11.847
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:06:41.848
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 04:07:11.843
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:11:41.845
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:16:41.856
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 04:16:41.964
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: Stream closed with error code NGHTTP2_REFUSED_STREAM
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:35:01.251
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:41:55.252
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 04:42:25.219
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 04:49:25.676
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 05:05:39.502
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 05:22:49.286
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 05:22:49.799
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 05:38:56.265
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 05:56:05.948
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 06:12:51.809
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 06:30:40.358
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 06:30:40.747
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 06:43:55.348
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 07:01:37.278
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 07:19:41.490
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 07:38:45.355
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 07:44:55.905
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 07:44:56.009
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 08:02:55.296
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 08:20:32.321
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 08:34:45.436
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 08:34:45.989
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: FetchError: read ECONNRESET
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 08:45:55.287
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:03:18.598
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:08:18.661
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:13:18.540
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:18:18.527
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:23:18.494
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 09:43:21.775
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 10:04:45.567
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 10:20:25.380
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 10:20:25.382
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 10:37:09.173
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 10:37:09.174
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 2 0 2026-10-22 10:41:03.620
+!MESSAGE [LS:GitHub Copilot Language Server][Warning]	[OrgCustomAgentClient] [OrgCustomAgentClient] list GOLASOOO/RI-JPA_2026-27 failed: HttpTimeoutError: Request to <https://api.individual.githubcopilot.com/agents/swe/custom-agents/GOLASOOO/RI-JPA_2026-27?include_sources=org,enterprise> timed out after 30000ms
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 10:42:11.947
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.553
+!MESSAGE [Info] Document is null for editor: WorkOrder.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.554
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/src/uo/ri/cws/domain/WorkOrder.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.575
+!MESSAGE [Info] Document is null for editor: Intervention.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.575
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/src/uo/ri/cws/domain/Intervention.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.592
+!MESSAGE [Info] Document is null for editor: StateChecks.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.592
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_util/src/uo/ri/util/assertion/StateChecks.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.607
+!MESSAGE [Info] Document is null for editor: AssociationBillsTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.607
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/test/uo/ri/cws/domain/AssociationBillsTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.621
+!MESSAGE [Info] Document is null for editor: InterventionRemoveSubstitutionsTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.621
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/test/uo/ri/cws/domain/InterventionRemoveSubstitutionsTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.652
+!MESSAGE [Info] Document is null for editor: InvoiceSettleTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.652
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/test/uo/ri/cws/domain/InvoiceSettleTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.680
+!MESSAGE [Info] Document is null for editor: CreditCardConstructorTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.681
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/test/uo/ri/cws/domain/CreditCardConstructorTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.694
+!MESSAGE [Info] Document is null for editor: CreditCard.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.694
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/src/uo/ri/cws/domain/CreditCard.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.709
+!MESSAGE [Info] Document is null for editor: WorkOrderLifecycleTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.709
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/test/uo/ri/cws/domain/WorkOrderLifecycleTests.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.725
+!MESSAGE [Info] Document is null for editor: ArgumentChecks.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.725
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_util/src/uo/ri/util/assertion/ArgumentChecks.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.745
+!MESSAGE [Info] Document is null for editor: Invoice.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 10:44:48.745
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/src/uo/ri/cws/domain/Invoice.java
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 10:44:49.041
+!MESSAGE Claude Code for Eclipse stopping...
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 10:44:49.044
+!MESSAGE Lock file removed (Rust)
+
+!ENTRY org.eclipse.ui.console 4 2 2026-10-22 10:44:49.067
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4934)
+	at org.eclipse.swt.SWT.error(SWT.java:4849)
+	at org.eclipse.swt.SWT.error(SWT.java:4820)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1204)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:955)
+	at org.eclipse.swt.widgets.Display.create(Display.java:939)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:132)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:800)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:791)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1538)
+	at org.eclipse.ui.internal.console.ConsoleZoomHandler$1.consolesRemoved(ConsoleZoomHandler.java:166)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:175)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:251)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:233)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeProcess(ProcessConsoleManager.java:177)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeLaunch(ProcessConsoleManager.java:162)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.shutdown(ProcessConsoleManager.java:264)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.stop(DebugUIPlugin.java:446)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:908)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:251)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:900)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1085)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:399)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2153)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2022)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:225)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:244)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+!ENTRY org.eclipse.ui.console 4 120 2026-10-22 10:44:49.068
+!MESSAGE An exception occurred during console notification
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4934)
+	at org.eclipse.swt.SWT.error(SWT.java:4849)
+	at org.eclipse.swt.SWT.error(SWT.java:4820)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1204)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:955)
+	at org.eclipse.swt.widgets.Display.create(Display.java:939)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:132)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:800)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:791)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1538)
+	at org.eclipse.ui.internal.console.ConsoleZoomHandler$1.consolesRemoved(ConsoleZoomHandler.java:166)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:175)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:251)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:233)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeProcess(ProcessConsoleManager.java:177)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeLaunch(ProcessConsoleManager.java:162)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.shutdown(ProcessConsoleManager.java:264)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.stop(DebugUIPlugin.java:446)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:908)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:251)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:900)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1085)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:399)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2153)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2022)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:225)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:244)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+!SESSION 2026-10-22 13:27:14.601 -----------------------------------------------
+eclipse.buildId=4.41.0.20260903-0719
+java.version=25.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/gonzalosuarezlosada/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/gonzalosuarezlosada/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2026-10-22 13:27:19.007
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-10-22 13:27:26.348
+!MESSAGE Logback config file: /Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.201.20260831-2044.xml
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:27:26.693
+!MESSAGE Claude Code for Eclipse starting...
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:27:30.649
+!MESSAGE HTTP+SSE server (Rust) listening on 127.0.0.1:10000
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:27:30.653
+!MESSAGE Lock file written (Rust) for port 10000 workspace=/Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01 projects=4
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:27:30.655
+!MESSAGE Claude Code server started on port 10000
+
+!ENTRY org.eclipse.jface 2 0 2026-10-22 13:27:30.895
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-10-22 13:27:30.895
+!MESSAGE A conflict occurred for ALT+COMMAND+S:
+Binding(ALT+COMMAND+S,
+	ParameterizedCommand(Command(com.anthropic.claudecode.eclipse.commands.sendSelection,Send Selection to Claude Terminal,
+		Send the current editor selection to the Claude Terminal,
+		Category(com.anthropic.claudecode.eclipse.commands.category,Claude Code,null,true),
+		WorkbenchHandlerServiceHandler("com.anthropic.claudecode.eclipse.commands.sendSelection"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+S,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.source.quickMenu,Show Source Quick Menu,
+		Shows the source quick menu,
+		Category(org.eclipse.jdt.ui.category.source,Source,Java Source Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.source.quickMenu"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 13:27:30.951
+!MESSAGE [Info] Starting language server with binary lsp agent.
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 13:27:30.955
+!MESSAGE [Info] Found native binary in fragment bundle: com.microsoft.copilot.eclipse.core.agent.macosx.aarch64
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 13:27:31.293
+!MESSAGE [Info] Binary agent started successfully.
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:27:32.617
+!MESSAGE Selection tracking started
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.409
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[lsp] GitHub Copilot Language Server 1.527.0 initialized
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.545
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[certificates] Removed 2 expired certificates
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.546
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[UndiciFetcher] Root certificate set changed; resetting Undici dispatchers. { certificateCount: 317 }
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.546
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[default] Policy watcher started for GitHub Copilot Plugin
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.546
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.546
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.551
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[UndiciFetcher] HTTP settings changed; resetting Undici dispatchers. {
+  proxy: 'none',
+  noProxyCount: 0,
+  proxyStrictSSL: true,
+  hasProxyAuthorization: false,
+  hasProxyKerberosServicePrincipal: false
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:33.551
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.001
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[GithubAvailableEmbeddingTypes] Got embeddings. Primary: metis-1024-I16-Binary. Deprecated: 
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.022
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[UndiciFetcher] Root certificate set changed; resetting Undici dispatchers. { certificateCount: 317 }
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.655
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AutoModelService] Auto model cache cleared due to token update
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.656
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[CopilotMCP] MCP state changed from false to true
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.660
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.661
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.661
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.661
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.661
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[BackgroundAgent] GitHub identity changed, clearing cached sessions {
+  hadPrevious: false,
+  hasCurrent: true,
+  cachedSessionCount: 0,
+  remoteDelegateCount: 0
+}
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.665
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.lsp4e 1 0 2026-10-22 13:27:34.695
+!MESSAGE [LS:GitHub Copilot Language Server][Info]	[AuthManager] resolveSession: persisted store resolved a session
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2026-10-22 13:27:36.939
+!MESSAGE The Eclipse Git-hosted URI 'http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore' is blocked for direct access.
+Please open a Bugzilla to add it to an official Oomph catalog.
+For initial testing, use the file system local version of the resource.
+Alternatively, run the setup archiver application as follows:
+  /Applications/Eclipse.app/Contents/MacOS/eclipse -application org.eclipse.oomph.setup.core.SetupArchiver -consoleLog -noSplash -uris http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/JDT.ecore
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 13:29:08.278
+!MESSAGE [Info] Document is null for editor: Invoice.java
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2026-10-22 13:29:08.280
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///Users/gonzalosuarezlosada/Resizes/PersonalStuff/UniOvi/RI_2026-27/JPA/proyect/lab-01/cws_base_2026/cws_services_jpa/src/uo/ri/cws/domain/Invoice.java
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:29:08.709
+!MESSAGE Claude Code for Eclipse stopping...
+
+!ENTRY com.anthropic.claudecode.eclipse 1 0 2026-10-22 13:29:08.710
+!MESSAGE Lock file removed (Rust)
+
+!ENTRY org.eclipse.ui.console 4 2 2026-10-22 13:29:08.727
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4934)
+	at org.eclipse.swt.SWT.error(SWT.java:4849)
+	at org.eclipse.swt.SWT.error(SWT.java:4820)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1204)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:955)
+	at org.eclipse.swt.widgets.Display.create(Display.java:939)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:132)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:800)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:791)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1538)
+	at org.eclipse.ui.internal.console.ConsoleZoomHandler$1.consolesRemoved(ConsoleZoomHandler.java:166)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:175)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:251)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:233)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeProcess(ProcessConsoleManager.java:177)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeLaunch(ProcessConsoleManager.java:162)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.shutdown(ProcessConsoleManager.java:264)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.stop(DebugUIPlugin.java:446)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:908)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:251)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:900)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1085)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:399)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2153)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2022)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:225)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:244)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+!ENTRY org.eclipse.ui.console 4 120 2026-10-22 13:29:08.728
+!MESSAGE An exception occurred during console notification
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4934)
+	at org.eclipse.swt.SWT.error(SWT.java:4849)
+	at org.eclipse.swt.SWT.error(SWT.java:4820)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1204)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:955)
+	at org.eclipse.swt.widgets.Display.create(Display.java:939)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:132)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:800)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:791)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1538)
+	at org.eclipse.ui.internal.console.ConsoleZoomHandler$1.consolesRemoved(ConsoleZoomHandler.java:166)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:175)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:251)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:233)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeProcess(ProcessConsoleManager.java:177)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.removeLaunch(ProcessConsoleManager.java:162)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsoleManager.shutdown(ProcessConsoleManager.java:264)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.stop(DebugUIPlugin.java:446)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:908)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:251)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:900)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1085)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:399)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:2153)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2022)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:281)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:225)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:699)
+	at org.eclipse.osgi.container.Module.stop(Module.java:557)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:212)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:244)
+	at java.base/java.lang.Thread.run(Thread.java:1474)

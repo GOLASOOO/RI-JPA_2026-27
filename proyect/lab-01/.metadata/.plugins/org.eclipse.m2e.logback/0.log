@@ -3551,3 +3551,7 @@ java.lang.NullPointerException: Cannot invoke "org.apache.maven.project.MavenPro
 2026-10-22 01:34:22,695 [main] INFO  o.e.m.jdt.internal.UnitTestSupport - Updating test from maven configuration
 2026-10-22 01:34:22,758 [Worker-36: Launching test] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/cws_util: uo.ri:cws_util:0.0.1-SNAPSHOT with classifier null to /cws_util/target/classes
 2026-10-22 01:34:22,767 [Worker-36: Launching test] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/cws_util: uo.ri:cws_util:0.0.1-SNAPSHOT with classifier null to /cws_util/target/classes
+2026-10-22 13:27:30,932 [Worker-10: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-10-22 13:27:42,603 [Worker-0: Launching test] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/cws_util: uo.ri:cws_util:0.0.1-SNAPSHOT with classifier  to /cws_util/target/classes
+2026-10-22 13:27:42,640 [Worker-0: Launching test] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/cws_util: uo.ri:cws_util:0.0.1-SNAPSHOT with classifier null to /cws_util/target/classes
+2026-10-22 13:27:42,657 [Worker-0: Launching test] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/cws_util: uo.ri:cws_util:0.0.1-SNAPSHOT with classifier null to /cws_util/target/classes

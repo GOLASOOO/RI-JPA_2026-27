@@ -2,8 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="uo.ri.cws.domain.Associations.Fixes"/>
     <fullyQualifiedTypeName name="uo.ri.cws.domain.Associations.RecordsIntervenes"/>
-    <fullyQualifiedTypeName name="uo.ri.cws.domain.Associations.PerformsSubstitutes"/>
     <fullyQualifiedTypeName name="uo.ri.cws.domain.types.Money"/>
     <fullyQualifiedTypeName name="uo.ri.util.assertion.StateChecks"/>
     <fullyQualifiedTypeName name="uo.ri.cws.domain.Associations.SettlesWithdraws"/>
+    <fullyQualifiedTypeName name="uo.ri.cws.domain.Associations.PerformsSubstitutes"/>
 </qualifiedTypeNameHistroy>
