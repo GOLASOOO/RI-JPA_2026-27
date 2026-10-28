@@ -2,17 +2,26 @@ package uo.ri.cws.domain;
 
 import java.util.Objects;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.VoucherCode;
 import uo.ri.util.assertion.ArgumentChecks;
 
+@Entity
 public class Voucher extends PaymentMean {
 
-    private VoucherCode code;
+	@AttributeOverride(name = "code", column=@Column(unique = true))  private VoucherCode code;
     private String description;
+    @AttributeOverride(name = "amount", column = @Column(name = "available", precision = 19, scale = 2))
     private Money availableAmount; // cents
 
     // ---- Constructors ----
+    protected Voucher() {
+    	
+    }
+    
     public Voucher(VoucherCode code, Money available) {
         this(code, "no-description", available);
     }

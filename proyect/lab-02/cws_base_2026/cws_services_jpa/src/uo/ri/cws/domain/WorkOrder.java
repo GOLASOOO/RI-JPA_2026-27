@@ -7,11 +7,27 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
-public class WorkOrder {
+@Entity
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "vehicle_id", "date" }) }) 
+//we specify the name of the columns of the foreign key, not the name of the attribute in the entity
+// Drawback of annotiations: we are polluting the domain model with persistence information, which is not ideal. 
+// We should use XML for this instead.
+
+
+public class WorkOrder extends BaseEntity {
 
 	public enum WorkOrderState {
 		OPEN, ASSIGNED, FINISHED, APPROVED, INVOICED
@@ -20,16 +36,25 @@ public class WorkOrder {
 	// Natural attributes
 	private LocalDateTime date;
 	private String description;
+	@AttributeOverride(name = "amount", column = @Column(precision = 19, scale = 2)) // Same name so we dont override
+																						// the column name
 	private Money amount = Money.ZERO; // cents
 	private WorkOrderState state = WorkOrderState.OPEN;
 
 	// Accidental attributes
+	@ManyToOne
 	private Invoice invoice;
+	@ManyToOne
 	private Mechanic mechanic;
+	@ManyToOne
 	private Vehicle vehicle;
+	@OneToMany(mappedBy = "workOrder", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Intervention> interventions = new HashSet<>();
 
 	// ---- Constructors ----
+	public WorkOrder() {
+		// For JPA
+	}
 
 	public WorkOrder(Vehicle vehicle) {
 		this(vehicle, LocalDateTime.now(), "no-description");

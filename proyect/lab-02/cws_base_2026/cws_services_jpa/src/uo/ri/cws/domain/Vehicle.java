@@ -4,24 +4,34 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.LicensePlate;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 
-public class Vehicle {
+@Entity
+public class Vehicle extends BaseEntity {
 
 	// Natural attributes
-	private LicensePlate licensePlate;
+	@AttributeOverride(name = "licensePlate", column=@Column(unique = true)) private LicensePlate licensePlate;
 	private String make;
 	private String model;
 	
 	// Accidental attributes
-	private VehicleType vehicleType;
-	private Client client;
-	private Set<WorkOrder> workOrders = new HashSet<>();
+	@ManyToOne private VehicleType vehicleType;
+	@ManyToOne private Client client;
+	@OneToMany(mappedBy="vehicle") private Set<WorkOrder> workOrders = new HashSet<>();
 
 	// ---- Constructors ----
-
+	Vehicle() {
+		// For JPA
+	}
+	
 	public Vehicle(LicensePlate plateNumber) {
 		// Delegate to the other constructor with meaningful default values for make and model
 		this(plateNumber, "Default Make", "Default Model");

@@ -1,5 +1,12 @@
 package uo.ri.cws.domain;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 
@@ -10,20 +17,27 @@ import uo.ri.util.assertion.ArgumentChecks;
  * Internal aggregate class of WorkOrder. Only Intervention can create
  * Substitutions (through WorkOrder).
  */
-public class Substitution {
+@Entity
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "SPAREPART_ID", "INTERVENTION_ID" }) })
+public class Substitution extends BaseEntity {
 	// Natural attributes
+	@AttributeOverride(name = "amount", column = @Column(name = "price", precision = 19, scale = 2))
 	private Money price;
 	private int quantity;
 
 	// Accidental attributes
-	private SparePart sparePart;
-	private Intervention intervention;
+	@ManyToOne private SparePart sparePart;
+	@ManyToOne private Intervention intervention;
 
 	// ---------------------------- Constructors -----------------------------
 	/**
 	 * Package-private constructor to create a new Substitution with the given
 	 * parameters. Only Intervention can create Substitutions.
 	 */
+	Substitution() {
+		// For JPA
+	}
+	
 	/* package */ Substitution(SparePart sparePart, Intervention intervention, int quantity) {
 		// Validate input parameters
 		// assignations

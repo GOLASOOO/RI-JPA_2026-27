@@ -2,15 +2,25 @@ package uo.ri.cws.domain;
 
 import java.util.Objects;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 
-public class SparePart {
+@Entity
+public class SparePart extends BaseEntity {
 	
 	// Natural attributes
-	private String code;
+	@Column(unique = true) private String code;
 	private String description;
+	@AttributeOverride(name = "amount", column = @Column(name="unitPrice", precision = 19, scale = 2))
 	private Money unitPrice;
+	
+	public SparePart() {
+		// For JPA
+	}
 
 	public SparePart(String code) {
 		this( code, "no-description", Money.ZERO );

@@ -2,19 +2,31 @@ package uo.ri.cws.domain;
 
 import java.util.Objects;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
 
-public class VehicleType {
-    private String name;
-    private Money pricePerHour;
+@Entity
+public class VehicleType extends BaseEntity {
+	@Column(unique = true)
+	private String name;
+	
+	@AttributeOverride(name = "amount", column = @Column(name = "pricePerHour", precision = 19, scale = 2))
+	private Money pricePerHour;
 
-    public VehicleType(String name, Money pricePerHour) {
-    	ArgumentChecks.isNotBlank(name);
-    	ArgumentChecks.isNotNull(pricePerHour);
-    	ArgumentChecks.isTrue(pricePerHour.isNonNegative(), "Price per hour must be equal or greater than zero");
-    	
-    	this.name = name;
+	public VehicleType() {
+		// For JPA
+	}
+
+	public VehicleType(String name, Money pricePerHour) {
+		ArgumentChecks.isNotBlank(name);
+		ArgumentChecks.isNotNull(pricePerHour);
+		ArgumentChecks.isTrue(pricePerHour.isNonNegative(), "Price per hour must be equal or greater than zero");
+
+		this.name = name;
 		this.pricePerHour = pricePerHour.roundToCents();
 	}
 
@@ -47,5 +59,5 @@ public class VehicleType {
 	public String toString() {
 		return "VehicleType [name=" + name + ", pricePerHour=" + pricePerHour + "]";
 	}
-    
+
 }

@@ -8,12 +8,19 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.Percentage;
 import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
-public class Invoice {
+@Entity
+public class Invoice extends BaseEntity {
 	private static final LocalDate JULY_1_2012 = LocalDate.of(2012, 7, 1);
 
 	public enum InvoiceState {
@@ -21,36 +28,49 @@ public class Invoice {
 	}
 
 	// Natural attributes
+	@Column(unique = true)
 	private long number;
 	private LocalDate date;
 	private InvoiceState state = InvoiceState.ISSUED;
 
 	/*
-	 * Subtotal amount of the invoice, before applying VAT. This represents the taxable base.
+	 * Subtotal amount of the invoice, before applying VAT. This represents the
+	 * taxable base.
 	 */
-	private Money subtotal = Money.ZERO;  // cents
+	@AttributeOverride(name = "amount", column = @Column(name = "subtotal", precision = 19, scale = 2))
+	private Money subtotal = Money.ZERO; // cents
 
 	/*
 	 * VAT rate applied to the invoice, expressed as a percentage. Example: 21% VAT.
 	 */
-	private Percentage vatRate = Percentage.ofPercent(21);  // default to 21%
+	@AttributeOverride(name = "value", column = @Column(name = "vatRate", precision = 19, scale = 2))
+	private Percentage vatRate = Percentage.ofPercent(21); // default to 21%
 
 	/*
-	 * VAT amount calculated from the subtotal amount. This is the tax the customer must pay.
+	 * VAT amount calculated from the subtotal amount. This is the tax the customer
+	 * must pay.
 	 */
-	private Money vatAmount = Money.ZERO;  // cents
+	@AttributeOverride(name = "amount", column = @Column(name = "vatAmount", precision = 19, scale = 2))
+	private Money vatAmount = Money.ZERO; // cents
 
 	/*
-	 * Total amount of the invoice including VAT. This is the final amount the customer must pay.
+	 * Total amount of the invoice including VAT. This is the final amount the
+	 * customer must pay.
 	 */
+	@AttributeOverride(name = "amount", column = @Column(name = "total", precision = 19, scale = 2))
 	private Money total = Money.ZERO; // cents
 
 	// Accidental attributes
+	@OneToMany(mappedBy = "invoice")
 	private Set<WorkOrder> workOrders = new HashSet<>();
+	@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<Charge> charges = new HashSet<>();
 
 	// ----------------- Constructors -------------------------------------
-	
+	public Invoice() {
+		// For JPA
+	}
+
 	public Invoice(long number) {
 		// call full constructor with sensible defaults
 //		throw new UnsupportedOperationException("Not implemented yet");
@@ -73,7 +93,8 @@ public class Invoice {
 		// add every work order calling addWorkOrder( w )
 		ArgumentChecks.isNotNull(date, "Invoice date cannot be null");
 		ArgumentChecks.isNotNull(workOrders, "Work orders list cannot be null");
-		ArgumentChecks.isTrue(workOrders.stream().allMatch(Objects::nonNull), "Work orders cannot contain null elements");
+		ArgumentChecks.isTrue(workOrders.stream().allMatch(Objects::nonNull),
+				"Work orders cannot contain null elements");
 		StateChecks.isTrue(workOrders.stream().allMatch(WorkOrder::isApproved), "All work orders must be approved");
 
 		this.number = number;
@@ -82,7 +103,7 @@ public class Invoice {
 		for (WorkOrder workOrder : workOrders) {
 			addWorkOrder(workOrder);
 		}
-		
+
 //		throw new UnsupportedOperationException("Not implemented yet");
 	}
 
@@ -95,8 +116,9 @@ public class Invoice {
 		return new HashSet<>(charges);
 	}
 
-	// ------------------ Association helpers (package-private) --------------------------
-	
+	// ------------------ Association helpers (package-private)
+	// --------------------------
+
 	Set<WorkOrder> _getWorkOrders() {
 		return workOrders;
 	}
@@ -106,27 +128,30 @@ public class Invoice {
 	}
 
 	// ---- Business methods --------------------------------------------
-	
+
 	/**
-	 * Adds a work order to the invoice. The work order must be approved and the invoice must not be settled.
+	 * Adds a work order to the invoice. The work order must be approved and the
+	 * invoice must not be settled.
+	 * 
 	 * @param workOrder
 	 */
 	public void addWorkOrder(WorkOrder workOrder) {
 		// Validations
-		// links the work order 
+		// links the work order
 		// compute the invoice amount after adding the work order
 		// marks it as invoiced
-		
+
 		ArgumentChecks.isNotNull(workOrder, "Work order cannot be null");
 		StateChecks.isTrue(workOrder.isApproved(), "Work order must be approved");
 		StateChecks.isTrue(!isSettled(), "Cannot add work order to a settled invoice");
-		
+
 		Associations.Bills.link(this, workOrder);
 		workOrder.invoice();
 	}
 
 	/**
 	 * Removes a work order from the invoice. The invoice must not be settled.
+	 * 
 	 * @param workOrder
 	 */
 	public void removeWorkOrder(WorkOrder workOrder) {
@@ -143,27 +168,32 @@ public class Invoice {
 	}
 
 	/**
-	 * Settles the invoice by charging the specified payment means with the requested amounts.
-	 * The total of the charges must equal the invoice total, and each payment mean must be able to be charged.
-	 * @param requestedCharges A map of payment means and their corresponding amounts to charge.
+	 * Settles the invoice by charging the specified payment means with the
+	 * requested amounts. The total of the charges must equal the invoice total, and
+	 * each payment mean must be able to be charged.
+	 * 
+	 * @param requestedCharges A map of payment means and their corresponding
+	 *                         amounts to charge.
 	 */
 	public void settle(Map<PaymentMean, Money> requestedCharges) {
 		// Validations
 		// Normalize the requested charges (round to cents, check positive)
 		// Check that the total of requested charges equals the invoice total
-		// For each payment mean, create a Charge and link it to the invoice and payment mean
+		// For each payment mean, create a Charge and link it to the invoice and payment
+		// mean
 		// Set the invoice state to PAID
 
 		ArgumentChecks.isNotNull(requestedCharges, "Requested charges map cannot be null");
 		ArgumentChecks.isFalse(requestedCharges.isEmpty(), "Requested charges map cannot be empty");
 		StateChecks.isTrue(!isSettled(), "Invoice is already settled");
 		Map<PaymentMean, Money> normalizedCharges = normalize(requestedCharges);
-		
+
 		Money totalCharges = chargesTotal(normalizedCharges);
 		StateChecks.isTrue(totalCharges.equals(getTotal()), "Total of requested charges must equal invoice total");
 
 		for (Map.Entry<PaymentMean, Money> entry : normalizedCharges.entrySet()) {
-			StateChecks.isTrue(entry.getKey().canBeCharged(entry.getValue()), "Payment mean cannot be charged with the given amount");
+			StateChecks.isTrue(entry.getKey().canBeCharged(entry.getValue()),
+					"Payment mean cannot be charged with the given amount");
 		}
 
 		for (Map.Entry<PaymentMean, Money> entry : normalizedCharges.entrySet()) {
@@ -171,9 +201,9 @@ public class Invoice {
 			Money amount = entry.getValue();
 			new Charge(this, paymentMean, amount);
 		}
-		
+
 		state = InvoiceState.PAID;
-		
+
 	}
 
 	public void unSettle() {
@@ -185,13 +215,12 @@ public class Invoice {
 
 	// ---- Calculation ----
 	private void computeAmount() {
-	    // 1. Sum all work order totals = subtotal
-	    // 2. Determine VAT rate based on invoice date
-	    // 3. Compute VAT amount
-	    // 4. Compute total amount (subtotal + VAT) rounded to cents
+		// 1. Sum all work order totals = subtotal
+		// 2. Determine VAT rate based on invoice date
+		// 3. Compute VAT amount
+		// 4. Compute total amount (subtotal + VAT) rounded to cents
 		throw new UnsupportedOperationException("Not implemented yet");
 	}
-
 
 	private Percentage getApplicableVatRate() {
 		return date.isAfter(JULY_1_2012) ? Percentage.ofPercent(21) : Percentage.ofPercent(18);
@@ -221,22 +250,37 @@ public class Invoice {
 			subtotal = Money.calc(subtotal).add(workorder.getAmount()).toMoneyRoundedToCents();
 		}
 		return subtotal;
-		
+
 	}
 
 	public Percentage getVatRate() {
 		return vatRate;
-		
+
 	}
 
 	public Money getVatAmount() {
 		return Money.calc(getSubtotal()).times(getVatRate().asRatio()).toMoneyRoundedToCents();
-		
+
 	}
 
 	public Money getTotal() {
 		return Money.calc(getSubtotal()).add(getVatAmount()).toMoneyRoundedToCents();
-		
+
 	}
 
+	public long getNumber() {
+		return number;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public InvoiceState getState() {
+		return state;
+	}
+
+
+	
+	
 }
