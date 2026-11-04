@@ -30,6 +30,7 @@ public class UpdateMechanicAction implements Action {
 		
 		// Ask for new data
 		// nif is the identity, cannot be changed
+		m.nif = Console.readString("NIF", m.nif); // Ask for new nif, if none is done, keep the old one
 		m.name = Console.readString("Name", m.name); 
 		m.surname = Console.readString("Surname", m.surname); 
 		
