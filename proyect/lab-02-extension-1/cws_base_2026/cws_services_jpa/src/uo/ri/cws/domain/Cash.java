@@ -1,5 +1,7 @@
 package uo.ri.cws.domain;
 
+import java.util.Objects;
+
 import jakarta.persistence.Entity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
@@ -40,9 +42,9 @@ public class Cash extends PaymentMean {
 	 * */
 	
 	public int hashCode() {
-		return getClient().hashCode();
+		return Objects.hash(getClient());
 	}
-	
+
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -51,7 +53,7 @@ public class Cash extends PaymentMean {
 		if (getClass() != obj.getClass())
 			return false;
 		Cash other = (Cash) obj;
-		return getClient().equals(other.getClient());
+		return Objects.equals(getClient(), other.getClient());
 	}
 	
 	

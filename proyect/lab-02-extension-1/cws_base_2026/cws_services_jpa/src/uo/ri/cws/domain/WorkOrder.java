@@ -40,6 +40,7 @@ public class WorkOrder extends BaseEntity {
 																						// the column name
 	private Money amount = Money.ZERO; // cents
 	private WorkOrderState state = WorkOrderState.OPEN;
+	private boolean usedForVoucher;
 
 	// Accidental attributes
 	@ManyToOne
@@ -390,6 +391,14 @@ public class WorkOrder extends BaseEntity {
 
 	public WorkOrderState getState() {
 		return state;
+	}
+
+	public boolean isUsedForVoucher() {
+		return usedForVoucher;
+	}
+
+	public void markAsUsedForVoucher() {
+		usedForVoucher = true;
 	}
 
 }
