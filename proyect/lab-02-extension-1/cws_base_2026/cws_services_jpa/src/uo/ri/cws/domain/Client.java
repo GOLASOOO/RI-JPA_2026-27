@@ -168,4 +168,40 @@ public class Client extends BaseEntity {
 		}
 	}
 
+	// ---- Voucher 25 (recommendations) ----
+
+	public boolean isEligibleForVoucher25() {
+		return hasPaidInvoice() && getRecommendationsAvailableForVoucher25().size() >= 3;
+	}
+
+	public List<Recommendation> getRecommendationsAvailableForVoucher25() {
+		List<Recommendation> available = new ArrayList<>();
+		for (Recommendation recommendation : recommendations) {
+			if (!recommendation.isUsedForVoucher() && recommendation.getRecommended().hasPaidInvoice()) {
+				available.add(recommendation);
+			}
+		}
+		return available;
+	}
+
+	public void markThreeRecommendationsAsUsedForVoucher25() {
+		List<Recommendation> available = getRecommendationsAvailableForVoucher25();
+		StateChecks.isTrue(available.size() >= 3, "Not enough available recommendations for a voucher");
+
+		for (int i = 0; i < 3; i++) {
+			available.get(i).markAsUsedForVoucher();
+		}
+	}
+
+	private boolean hasPaidInvoice() {
+		for (Vehicle vehicle : vehicles) {
+			for (WorkOrder workOrder : vehicle.getWorkOrders()) {
+				if (workOrder.getInvoice() != null && workOrder.getInvoice().isSettled()) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 }
