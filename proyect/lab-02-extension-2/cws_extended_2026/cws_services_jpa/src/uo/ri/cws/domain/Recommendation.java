@@ -2,10 +2,12 @@ package uo.ri.cws.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.util.assertion.ArgumentChecks;
 
 @Entity
+@Table(name = "TRECOMMENDATIONS")
 public class Recommendation extends BaseEntity {
 
 	// Natural attributes

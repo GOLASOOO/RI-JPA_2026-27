@@ -13,6 +13,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.Percentage;
@@ -20,6 +21,7 @@ import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
 @Entity
+@Table(name = "TINVOICES")
 public class Invoice extends BaseEntity {
 	private static final LocalDate JULY_1_2012 = LocalDate.of(2012, 7, 1);
 	private static final Money VOUCHER_30_THRESHOLD = Money.of("500.00");

@@ -11,6 +11,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Address;
 import uo.ri.cws.domain.types.Email;
@@ -22,6 +23,7 @@ import uo.ri.util.assertion.StateChecks;
 
 
 @Entity
+@Table(name = "TCLIENTS")
 public class Client extends BaseEntity {
 
 	

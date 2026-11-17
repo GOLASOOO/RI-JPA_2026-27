@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.util.assertion.ArgumentChecks;
@@ -12,6 +13,7 @@ import uo.ri.util.assertion.StateChecks;
 
 @Entity
 @Inheritance(strategy = jakarta.persistence.InheritanceType.JOINED)
+@Table(name = "TPAYMENTMEANS")
 public abstract class PaymentMean extends BaseEntity {
 
 	// Natural attributes

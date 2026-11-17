@@ -12,11 +12,11 @@ import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
 @Entity
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "INVOICE_ID", "PAYMENTMEAN_ID" }) })
+@Table(name = "TCHARGES", uniqueConstraints = { @UniqueConstraint(columnNames = { "INVOICE_ID", "PAYMENTMEAN_ID" }) })
 public class Charge extends BaseEntity {
 
 	// Natural attributes
-	@AttributeOverride(name = "amount", column = @Column(precision = 19, scale = 2)) //Same name so we dont override the column name
+	@AttributeOverride(name = "amount", column = @Column(name = "CHARGE", precision = 19, scale = 2))
     private Money amount; // cents
 
     // Accidental attributes
