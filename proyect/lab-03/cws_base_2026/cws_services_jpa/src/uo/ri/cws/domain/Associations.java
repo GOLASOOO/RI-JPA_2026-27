@@ -277,4 +277,37 @@ public class Associations {
 			substitution._setSparePart(null);
 		}
 	}
+
+	public static class Recommends {
+
+		/* package */ static void link(Client recommender, Recommendation recommendation, Client recommended) {
+			ArgumentChecks.isNotNull(recommender);
+			ArgumentChecks.isNotNull(recommendation);
+			ArgumentChecks.isNotNull(recommended);
+			StateChecks.isTrue(recommendation.getRecommender() == null, "Recommendation already has a recommender");
+			StateChecks.isTrue(recommendation.getRecommended() == null, "Recommendation already has a recommended client");
+			StateChecks.isFalse(recommender._getRecommendations().contains(recommendation), "Recommender already has this recommendation");
+			StateChecks.isTrue(recommended.getRecommendation() == null, "Recommended client already has a recommendation");
+
+			recommendation._setRecommender(recommender);
+			recommendation._setRecommended(recommended);
+			recommender._getRecommendations().add(recommendation);
+			recommended._setRecommendation(recommendation);
+		}
+
+		/* package */ static void unlink(Recommendation recommendation) {
+			ArgumentChecks.isNotNull(recommendation);
+			Client recommender = recommendation.getRecommender();
+			StateChecks.isTrue(recommender != null, "Recommendation has no recommender");
+			Client recommended = recommendation.getRecommended();
+			StateChecks.isTrue(recommended != null, "Recommendation has no recommended client");
+			StateChecks.isTrue(recommender._getRecommendations().contains(recommendation), "Recommender does not have this recommendation");
+			StateChecks.isTrue(recommended.getRecommendation() == recommendation, "Recommended client does not refer to this recommendation");
+
+			recommender._getRecommendations().remove(recommendation);
+			recommendation._setRecommender(null);
+			recommendation._setRecommended(null);
+			recommended._setRecommendation(null);
+		}
+	}
 }

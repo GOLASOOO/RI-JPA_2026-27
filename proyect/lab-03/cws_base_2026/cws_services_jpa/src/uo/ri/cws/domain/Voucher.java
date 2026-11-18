@@ -5,11 +5,13 @@ import java.util.Objects;
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.VoucherCode;
 import uo.ri.util.assertion.ArgumentChecks;
 
 @Entity
+@Table(name = "TVOUCHERS")
 public class Voucher extends PaymentMean {
 
 	@AttributeOverride(name = "code", column=@Column(unique = true))  private VoucherCode code;

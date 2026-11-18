@@ -21,7 +21,7 @@ import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
 @Entity
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "vehicle_id", "date" }) }) 
+@Table(name = "TWORKORDERS", uniqueConstraints = { @UniqueConstraint(columnNames = { "vehicle_id", "date" }) })
 //we specify the name of the columns of the foreign key, not the name of the attribute in the entity
 // Drawback of annotiations: we are polluting the domain model with persistence information, which is not ideal. 
 // We should use XML for this instead.
@@ -36,10 +36,10 @@ public class WorkOrder extends BaseEntity {
 	// Natural attributes
 	private LocalDateTime date;
 	private String description;
-	@AttributeOverride(name = "amount", column = @Column(precision = 19, scale = 2)) // Same name so we dont override
-																						// the column name
+	@AttributeOverride(name = "amount", column = @Column(name = "TOTAL_AMOUNT", precision = 19, scale = 2))
 	private Money amount = Money.ZERO; // cents
 	private WorkOrderState state = WorkOrderState.OPEN;
+	private boolean usedForVoucher;
 
 	// Accidental attributes
 	@ManyToOne
@@ -390,6 +390,14 @@ public class WorkOrder extends BaseEntity {
 
 	public WorkOrderState getState() {
 		return state;
+	}
+
+	public boolean isUsedForVoucher() {
+		return usedForVoucher;
+	}
+
+	public void markAsUsedForVoucher() {
+		usedForVoucher = true;
 	}
 
 }

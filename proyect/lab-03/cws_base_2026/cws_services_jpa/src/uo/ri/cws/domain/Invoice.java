@@ -13,6 +13,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import uo.ri.cws.domain.base.BaseEntity;
 import uo.ri.cws.domain.types.Money;
 import uo.ri.cws.domain.types.Percentage;
@@ -20,8 +21,10 @@ import uo.ri.util.assertion.ArgumentChecks;
 import uo.ri.util.assertion.StateChecks;
 
 @Entity
+@Table(name = "TINVOICES")
 public class Invoice extends BaseEntity {
 	private static final LocalDate JULY_1_2012 = LocalDate.of(2012, 7, 1);
+	private static final Money VOUCHER_30_THRESHOLD = Money.of("500.00");
 
 	public enum InvoiceState {
 		ISSUED, PAID
@@ -32,6 +35,7 @@ public class Invoice extends BaseEntity {
 	private long number;
 	private LocalDate date;
 	private InvoiceState state = InvoiceState.ISSUED;
+	private boolean usedForVoucher;
 
 	/*
 	 * Subtotal amount of the invoice, before applying VAT. This represents the
@@ -280,7 +284,12 @@ public class Invoice extends BaseEntity {
 		return state;
 	}
 
+	public boolean canGenerateVoucher30() {
+		return isSettled() && !usedForVoucher && getTotal().greaterThan(VOUCHER_30_THRESHOLD);
+	}
 
-	
-	
+	public void markAsUsedForVoucher() {
+		usedForVoucher = true;
+	}
+
 }
