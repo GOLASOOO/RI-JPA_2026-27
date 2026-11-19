@@ -10,6 +10,7 @@ import uo.ri.cws.domain.Mechanic;
 import uo.ri.cws.domain.types.FullName;
 import uo.ri.cws.domain.types.Nif;
 import uo.ri.util.assertion.ArgumentChecks;
+import uo.ri.util.exception.BusinessChecks;
 import uo.ri.util.exception.BusinessException;
 
 public class UpdateMechanic implements Command<Void> {
@@ -19,6 +20,9 @@ public class UpdateMechanic implements Command<Void> {
 
 	public UpdateMechanic(MechanicDto dto) {
 		ArgumentChecks.isNotNull(dto, "The mechanic dto is null");
+		ArgumentChecks.isNotBlank(dto.nif, "The mechanic nif is empty");
+		ArgumentChecks.isNotBlank(dto.name, "The mechanic name is empty");
+		ArgumentChecks.isNotBlank(dto.surname, "The mechanic surname is empty");
 		
 		this.dto = dto;
 	}
@@ -36,6 +40,8 @@ public class UpdateMechanic implements Command<Void> {
 			throw new BusinessException("There is another mechanic with the same nif");
 		}
 		m.setFullName(new FullName(dto.name, dto.surname));
+		m.updatedNow();
+		BusinessChecks.isTrue(dto.version == m.getVersion(), "The mechanic has been modified by another transaction");
 		m.setNif(newNif);
 		
 		// All objects are persistent, so no need to call merge/persist on the repository

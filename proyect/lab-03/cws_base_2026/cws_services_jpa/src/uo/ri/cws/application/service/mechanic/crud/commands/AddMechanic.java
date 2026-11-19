@@ -9,6 +9,7 @@ import uo.ri.cws.domain.Mechanic;
 import uo.ri.cws.domain.types.FullName;
 import uo.ri.cws.domain.types.Nif;
 import uo.ri.util.assertion.ArgumentChecks;
+import uo.ri.util.exception.BusinessChecks;
 import uo.ri.util.exception.BusinessException;
 
 public class AddMechanic implements Command<MechanicDto> {
@@ -32,6 +33,9 @@ public class AddMechanic implements Command<MechanicDto> {
 		FullName name = new FullName(dto.name, dto.surname);
 		Mechanic m = new Mechanic(nif, name);
 		
+		
+		// Check if there is another mechanic with the same nif
+		BusinessChecks.doesNotExist(repo.findByNif(nif), "The mechanic does not exist");
 		
 		// PErsist the new mechanic in the mapper (Transient -> Persistent)
 //		EntityManagerFactory emf = Persistence.createEntityManagerFactory("carworkshop"); // persistence unit name (carworkshop) can be found inside cws_services_jpa/.../persistence.xml

@@ -33,9 +33,9 @@
 
 	<named-query name="Mechanic.countInterventions">
 		<query>
-			select count (i) 
-			from interventions i
-			where i.mechanic.mechanicId i= ?1
+			select count (i)
+			from Intervention i
+			where i.mechanic.id = ?1
 		</query>
 	</named-query>
 
